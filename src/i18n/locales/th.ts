@@ -1,0 +1,9 @@
+﻿export default {
+  nav: { features: 'ฟีเจอร์', pricing: 'ราคา', login: 'เข้าสู่ระบบ', getStarted: 'เริ่มฟรี' },
+  hero: { title: 'เปลี่ยนเพจ Facebook ใดก็ได้ให้เป็นโฆษณาที่มี Conversion สูง — ภายในไม่กี่นาที', subtitle: 'เครื่องมือการตลาด AI สำหรับนักโฆษณา Facebook ผู้สร้างวิดีโอ และนักไลฟ์สด', cta: 'เริ่มฟรี', ctaSub: 'ไม่ต้องใช้บัตรเครดิต' },
+  features: { title: 'ทุกสิ่งที่คุณต้องการ', analysis: { title: 'วิเคราะห์เพจ', desc: 'วิเคราะห์เพจ Facebook ด้วย AI' }, copy: { title: 'สร้างข้อความโฆษณา', desc: 'สร้างข้อความ 2 เวอร์ชัน' }, landing: { title: 'สร้างหน้า Landing', desc: 'สร้างหน้า HTML พร้อมตัวอย่าง' }, video: { title: 'สร้างวิดีโอ', desc: 'สร้างวิดีโอ AI สำหรับผลิตภัณฑ์' } },
+  pricing: { title: 'ราคาที่เรียบง่ายและโปร่งใส', subtitle: 'เริ่มฟรี อัปเกรดเมื่อต้องการ', starter: { name: 'เริ่มต้น', price: '$19', period: '/เดือน', tokens: '50,000 AI tokens', videos: '5 วิดีโอ', files: '3 ไฟล์แบรนด์', support: 'รองรับทางอีเมล' }, pro: { name: 'โปร', price: '$49', period: '/เดือน', tokens: '200,000 AI tokens', videos: '20 วิดีโอ', files: '10 ไฟล์แบรนด์', support: 'รองรับทางอีเมลด่วน', badge: 'ยอดนิยม' }, enterprise: { name: 'องค์กร', price: 'กำหนดเอง', cta: 'ติดต่อเรา', tokens: 'AI tokens ไม่จำกัด', videos: 'วิดีโอไม่จำกัด', files: 'ไฟล์แบรนด์ไม่จำกัด', support: 'รองรับเฉพาะบุคคล' }, cta: 'เริ่มเลย' },
+  tokens: { title: 'ต้องการ Token เพิ่ม?', subtitle: 'จ่ายตามการใช้งาน Token ไม่หมดอายุ', small: { name: 'แพ็คเล็ก', price: '$9', tokens: '20,000 tokens' }, medium: { name: 'แพ็คกลาง', price: '$19', tokens: '50,000 tokens' }, large: { name: 'แพ็คใหญ่', price: '$39', tokens: '120,000 tokens' }, cta: 'ซื้อเลย' },
+  contact: { title: 'ติดต่อฝ่ายขายองค์กร', name: 'ชื่อ-นามสกุล', email: 'อีเมล', message: 'บอกเราเกี่ยวกับความต้องการของคุณ', submit: 'ส่งข้อความ', success: 'ส่งข้อความแล้ว! เราจะตอบกลับภายใน 24 ชั่วโมง', error: 'ส่งไม่สำเร็จ' },
+  footer: { rights: '© 2026 AI Marketing OS. สงวนลิขสิทธิ์', contact: 'ติดต่อ' },
+}

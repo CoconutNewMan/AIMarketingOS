@@ -1,0 +1,50 @@
+export default {
+  nav: {
+    features: 'Features',
+    pricing: 'Pricing',
+    login: 'Log In',
+    getStarted: 'Get Started Free',
+  },
+  hero: {
+    title: 'Turn Any Facebook Page Into High-Converting Ads — In Minutes',
+    subtitle: 'AI-powered marketing tools for Facebook advertisers, video creators, and live streamers. Analyze competitors, generate copy, and build landing pages instantly.',
+    cta: 'Start Free',
+    ctaSub: 'No credit card required',
+  },
+  features: {
+    title: 'Everything You Need to Dominate Your Market',
+    analysis: { title: 'Page Analysis', desc: 'Scrape and analyze any Facebook page. Get SWOT insights powered by Claude AI.' },
+    copy: { title: 'Copy Generator', desc: 'Generate 2 versions of title, body, and CTA copy for any campaign.' },
+    landing: { title: 'Landing Page Builder', desc: 'Create full HTML landing pages with live preview and one-click download.' },
+    video: { title: 'Video Generation', desc: 'AI video creation for product showcases, lifestyle content, and UGC ads.' },
+  },
+  pricing: {
+    title: 'Simple, Transparent Pricing',
+    subtitle: 'Start free, upgrade when you need more power.',
+    starter: { name: 'Starter', price: '$19', period: '/month', tokens: '50,000 AI tokens', videos: '5 video generations', files: '3 brand files', support: 'Email support' },
+    pro: { name: 'Pro', price: '$49', period: '/month', tokens: '200,000 AI tokens', videos: '20 video generations', files: '10 brand files', support: 'Priority email support', badge: 'Most Popular' },
+    enterprise: { name: 'Enterprise', price: 'Custom', cta: 'Contact Us', tokens: 'Unlimited AI tokens', videos: 'Unlimited video generations', files: 'Unlimited brand files', support: 'Dedicated support' },
+    cta: 'Get Started',
+  },
+  tokens: {
+    title: 'Need More Tokens? Top Up Anytime',
+    subtitle: 'Pay only for what you use. Tokens never expire.',
+    small: { name: 'Small Pack', price: '$9', tokens: '20,000 tokens' },
+    medium: { name: 'Medium Pack', price: '$19', tokens: '50,000 tokens' },
+    large: { name: 'Large Pack', price: '$39', tokens: '120,000 tokens' },
+    cta: 'Buy Now',
+  },
+  contact: {
+    title: 'Contact Enterprise Sales',
+    name: 'Full Name',
+    email: 'Email Address',
+    message: 'Tell us about your needs',
+    submit: 'Send Message',
+    success: "Message sent! We'll get back to you within 24 hours.",
+    error: 'Failed to send. Please email us directly.',
+  },
+  footer: {
+    rights: '© 2026 AI Marketing OS. All rights reserved.',
+    contact: 'Contact',
+  },
+}
