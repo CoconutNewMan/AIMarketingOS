@@ -11,6 +11,7 @@ export function useAuth() {
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {
+      console.log('useAuth: Initial session:', session?.user?.email)
       setSession(session)
       setUser(session?.user ?? null)
       if (session?.user) fetchDbUser(session.user.id)
@@ -18,6 +19,7 @@ export function useAuth() {
     })
 
     const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+      console.log('useAuth: Auth state changed, event:', _event, 'user:', session?.user?.email)
       setSession(session)
       setUser(session?.user ?? null)
       if (session?.user) fetchDbUser(session.user.id)
