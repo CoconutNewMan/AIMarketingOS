@@ -30,9 +30,24 @@ export function useAuth() {
   }, [])
 
   async function fetchDbUser(userId: string) {
-    const { data } = await supabase.from('users').select('*').eq('id', userId).single()
-    setDbUser(data)
-    setLoading(false)
+    try {
+      const { data, error } = await supabase.from('users').select('*').eq('id', userId).single()
+      if (error) {
+        // User doesn't exist in database yet, create it
+        console.log('User not found in database, creating...')
+        const { data: newUser } = await supabase.from('users').insert({
+          id: userId,
+          email: (await supabase.auth.getUser()).data.user?.email,
+        }).select().single()
+        setDbUser(newUser)
+      } else {
+        setDbUser(data)
+      }
+    } catch (err) {
+      console.error('Error fetching or creating user:', err)
+    } finally {
+      setLoading(false)
+    }
   }
 
   async function register(email: string, password: string) {

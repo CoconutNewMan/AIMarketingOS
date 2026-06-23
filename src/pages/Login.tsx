@@ -1,5 +1,4 @@
-// Trigger deployment
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useAuth } from '../hooks/useAuth'
 import { supabase } from '../lib/supabase'
@@ -11,8 +10,15 @@ export default function Login() {
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
   const [success, setSuccess] = useState('')
-  const { login, register } = useAuth()
+  const { login, register, session } = useAuth()
   const navigate = useNavigate()
+
+  // Redirect to dashboard if already logged in
+  useEffect(() => {
+    if (session) {
+      navigate('/dashboard', { replace: true })
+    }
+  }, [session, navigate])
 
   async function handleGoogleSignIn() {
     try {
@@ -20,12 +26,14 @@ export default function Login() {
       setLoading(true)
       const { error } = await supabase.auth.signInWithOAuth({
         provider: 'google',
-        options: { redirectTo: window.location.origin + '/dashboard' },
+        options: {
+          redirectTo: `${window.location.origin}/dashboard`,
+          scopes: 'openid email profile'
+        },
       })
       if (error) throw error
     } catch (err: unknown) {
       setError(err instanceof Error ? err.message : 'Google 登入失败')
-    } finally {
       setLoading(false)
     }
   }
